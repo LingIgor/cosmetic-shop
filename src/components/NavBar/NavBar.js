@@ -12,8 +12,8 @@ export const NavBar = () => {
         <Link>Контакти</Link>
       </nav>
       <div style={{ display: "flex" }}>
-        <CiUser size={25} />
-        <BsHandbag size={23} />
+        <Link><CiUser size={25} /></Link>
+        <Link><BsHandbag size={23} /></Link>
       </div>
     </div>
   );
