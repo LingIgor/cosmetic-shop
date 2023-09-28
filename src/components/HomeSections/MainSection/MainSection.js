@@ -22,7 +22,7 @@ export const MainSection = () => {
       <Title>
         <h1>COSMETING</h1>
         <p>Натуральная косметика для бережного ухода за кожей</p>
-        <button>Подробнее</button>
+        <button style={{width:"163px", height:"41px"}}>Подробнее</button>
       </Title>
 
       <div>

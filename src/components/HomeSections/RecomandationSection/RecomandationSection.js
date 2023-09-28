@@ -5,7 +5,7 @@ import { Item, TextBox } from './RecomandationSection.styled';
 
 export const RecomendationSection = () => {
   return (
-    <div style={{ display: 'flex', marginTop: '210px', padding: '0 28px' }}>
+    <div style={{ display: 'flex', marginTop: '210px', padding: '0 28px', alignItems: "center" }}>
       <div>
         <h2>Бестселлеры</h2>
         <p>Легендарные продукты, завоевавшие любовь наших клиентов</p>
