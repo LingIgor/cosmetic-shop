@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cosmetic-shop/static/css/main.e6ac4129.css",
-    "main.js": "/cosmetic-shop/static/js/main.95d3683f.js",
+    "main.js": "/cosmetic-shop/static/js/main.aa36f595.js",
     "static/media/History.png": "/cosmetic-shop/static/media/History.43e1ba0afd9ea7c6e559.png",
     "static/media/reklama.png": "/cosmetic-shop/static/media/reklama.201f774589a0a65df4a7.png",
     "static/media/CarePhoto.png": "/cosmetic-shop/static/media/CarePhoto.8f64c9d3f69bdba77c2a.png",
@@ -11,15 +11,16 @@
     "static/media/Subscribe3.png": "/cosmetic-shop/static/media/Subscribe3.ae08c3b459020e8882d7.png",
     "static/media/Subscribe5.png": "/cosmetic-shop/static/media/Subscribe5.18a37edddfb976603791.png",
     "static/media/Subscribe2.png": "/cosmetic-shop/static/media/Subscribe2.1a45f63d4331ebd63f1d.png",
+    "static/media/CatalogProduct.png": "/cosmetic-shop/static/media/CatalogProduct.3d47bb72b9b4f31e1eee.png",
     "static/media/Subscribe4.png": "/cosmetic-shop/static/media/Subscribe4.5951b371d364a65d8198.png",
     "static/media/Subscribe1.png": "/cosmetic-shop/static/media/Subscribe1.fdb6f7cf867db40c08ce.png",
     "static/media/Subscribe6.png": "/cosmetic-shop/static/media/Subscribe6.d3548a13510e2bf320a6.png",
     "index.html": "/cosmetic-shop/index.html",
     "main.e6ac4129.css.map": "/cosmetic-shop/static/css/main.e6ac4129.css.map",
-    "main.95d3683f.js.map": "/cosmetic-shop/static/js/main.95d3683f.js.map"
+    "main.aa36f595.js.map": "/cosmetic-shop/static/js/main.aa36f595.js.map"
   },
   "entrypoints": [
     "static/css/main.e6ac4129.css",
-    "static/js/main.95d3683f.js"
+    "static/js/main.aa36f595.js"
   ]
 }
