@@ -5,18 +5,20 @@ import { AdvertisingSection } from 'components/HomeSections/AdvertisingSection/A
 import { CareSection } from 'components/HomeSections/CareSection/CareSection';
 import { HistorySection } from 'components/HomeSections/HistorySection/HistorySection';
 import { SubscribeSection } from 'components/HomeSections/SubscribeSection/SubscribeSection';
-import { ContactsSection } from 'components/HomeSections/ContactsSection/ContactsSection';
+
+import Contacts from 'components/Contacts/Contacts';
 
 export const Home = () => {
   return (
     <>
       <MainSection />
       <RecomendationSection />
-      <AdvertisingSection/>
-      <CareSection/>
-      <HistorySection/>
-      <SubscribeSection/>
-      <ContactsSection/>
+      <AdvertisingSection />
+      <CareSection />
+      <HistorySection />
+      <SubscribeSection />
+
+      <Contacts />
     </>
   );
 };

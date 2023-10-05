@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://LingIgor.github.io/cosmetic-shop/",
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "@redux-devtools/extension": "^3.2.5",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",

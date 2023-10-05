@@ -19,4 +19,5 @@ export const AppContainer = styled.div`
   top: 0;
   left: 0;
   border-radius: 0;
+  z-index: -1;
 `;
