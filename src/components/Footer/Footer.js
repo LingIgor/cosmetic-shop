@@ -9,7 +9,7 @@ export const Footer = () => {
     <FooterConteiner>
       <div
         style={{
-          padding: ' 60px 98px',
+          padding: ' 40px 98px',
           alignItems: 'center',
           display: 'flex',
           justifyContent: 'space-between',
@@ -66,7 +66,7 @@ export const Footer = () => {
       </div>
       <div
         style={{
-          height: '40px',
+          // height: '40px',
           background: '#F4F1ED',
           padding: ' 22px 98px',
           alignItems: 'center',

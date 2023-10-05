@@ -3,10 +3,10 @@ import { Header } from '../Header/Header';
 import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-export const Layout = () => {
+export const Layout = ({ openModal }) => {
   return (
     <>
-      <Header />
+      <Header openModal={openModal} />
       <main>
         <Suspense fallback={null}>
           <Outlet />

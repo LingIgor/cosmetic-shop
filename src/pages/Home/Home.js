@@ -7,10 +7,14 @@ import { HistorySection } from 'components/HomeSections/HistorySection/HistorySe
 import { SubscribeSection } from 'components/HomeSections/SubscribeSection/SubscribeSection';
 
 import Contacts from 'components/Contacts/Contacts';
+// import LoginForm from 'components/Signin/Signin';
+// import RegistrForm from 'components/Signup/Signup';
 
 export const Home = () => {
   return (
     <>
+      {/* <LoginForm />
+      <RegistrForm /> */}
       <MainSection />
       <RecomendationSection />
       <AdvertisingSection />
