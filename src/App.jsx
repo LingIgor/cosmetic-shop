@@ -2,8 +2,8 @@ import { Home } from './pages/Home/Home';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { Catalog } from 'pages/Home/Catalog';
-import Modal from 'components/Modal/ModalLogin/LoginModal';
 import { useState } from 'react';
+import LoginModal from 'components/Modal/ModalLogin/LoginModal';
 // import { Favorites } from 'pages/Favorites';
 
 export const App = () => {
@@ -25,8 +25,10 @@ export const App = () => {
   return (
     <div>
       {isModalOpen && (
-        <Modal onClose={closeModal} handleRegister={handleRegister} />
+        <LoginModal onClose={closeModal} handleRegister={handleRegister} />
       )}
+
+
       <Routes>
         <Route path="/" element={<Layout openModal={openModal} />}>
           <Route path="/" element={<Home />} />
