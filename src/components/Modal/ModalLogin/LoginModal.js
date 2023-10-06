@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
 import LoginForm from 'components/Signin/Signin';
@@ -24,19 +24,39 @@ const ModalContent = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
-const LoginModal = ({ onClose, handleRegister }) => {
+const LoginModal = ({ closeModal, handleRegister }) => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(true);
+
+  useEffect(() => {
+    const handleEscape = event => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+
+    return () => {
+      window.removeEventListener('keydown', handleEscape);
+    };
+  }, [closeModal]);
+
+  const handleBackdropClick = event => {
+    if (event.target === event.currentTarget) {
+      closeModal();
+    }
+  };
 
   const switchToRegister = () => {
     setLoginFormVisible(!isLoginFormVisible);
   };
 
   const handleLogin = () => {
-    onClose();
+    closeModal();
   };
 
   return createPortal(
-    <ModalWrapper>
+    <ModalWrapper onClick={handleBackdropClick}>
       <ModalContent>
         {isLoginFormVisible ? (
           <LoginForm

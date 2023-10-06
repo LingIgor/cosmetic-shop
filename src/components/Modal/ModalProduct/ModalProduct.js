@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
 import {AiOutlineCloseCircle} from "react-icons/ai"
@@ -13,7 +13,8 @@ const ModalWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 1000;
+  
   
 `;
 
@@ -26,6 +27,7 @@ const ModalContent = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   display: flex;
   position: relative;
+  
   
 `;
 
@@ -63,6 +65,28 @@ const Button = styled.button`
 const ProductModal = ({ closeModal, el }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
+    useEffect(() => {
+      const handleEscape = event => {
+        if (event.key === 'Escape') {
+          closeModal();
+        }
+      };
+  
+      window.addEventListener('keydown', handleEscape);
+  
+      return () => {
+        window.removeEventListener('keydown', handleEscape);
+      };
+    }, [closeModal]);
+
+  
+    const handleBackdropClick = event => {
+      if (event.target === event.currentTarget) {
+        closeModal()        
+        console.log("yes")
+      }
+    };
+
 
     const {name, price, volume, img, category, description} =  el
 
@@ -72,8 +96,8 @@ const ProductModal = ({ closeModal, el }) => {
     // Ваш існуючий код
   
     return createPortal(
-      <ModalWrapper onClick={closeModal} >
-        <ModalContent onClick={(e) => e.stopPropagation()}>
+      <ModalWrapper onClick={handleBackdropClick} >
+        <ModalContent >
             <AiOutlineCloseCircle size={25} style={{position:"absolute", top:"0", right:"0",cursor:"pointer"}} onClick={closeModal}/>
           <ImageContainer>
             <Image src={img} alt="Product" />
@@ -96,7 +120,7 @@ const ProductModal = ({ closeModal, el }) => {
           </InfoContainer>
         </ModalContent>
       </ModalWrapper>,
-      document.getElementById('portal-root')
+      document.getElementById('portal-root-product')
     );
   };
 

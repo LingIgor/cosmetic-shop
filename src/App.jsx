@@ -25,7 +25,7 @@ export const App = () => {
   return (
     <div>
       {isModalOpen && (
-        <LoginModal onClose={closeModal} handleRegister={handleRegister} />
+        <LoginModal closeModal={closeModal} handleRegister={handleRegister} />
       )}
 
 

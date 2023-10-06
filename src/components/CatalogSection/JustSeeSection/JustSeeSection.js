@@ -21,8 +21,8 @@ export const JustSeeSection = () => {
           .slice(-4)
           .reverse()
           .map(el => (
-            <li>
-            <Products key={el.id} el={el}/>
+            <li key={el.id}>
+            <Products  el={el}/>
             
             </li>
           ))}
