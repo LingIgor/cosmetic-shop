@@ -4,17 +4,29 @@ import { Layout } from './components/Layout/Layout';
 import { Catalog } from 'pages/Home/Catalog';
 import { useState } from 'react';
 import LoginModal from 'components/Modal/ModalLogin/LoginModal';
+import CartModal from 'components/Modal/ModalCart/ModalCart';
 // import { Favorites } from 'pages/Favorites';
 
 export const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isCart, setIsCart] = useState(false)
 
-  const openModal = () => {
-    setModalOpen(true);
+  const openModal = (iconType) => {
+    if (iconType === "BsHandbag") {      
+      setIsCart(true);
+    }
+    if (iconType === "CiUser") {      
+      setModalOpen(true);
+    }      
   };
 
+  
+const closeCartModal = () => {
+  setIsCart(false)
+}
   const closeModal = () => {
     setModalOpen(false);
+
   };
 
   const handleRegister = userData => {
@@ -28,6 +40,9 @@ export const App = () => {
         <LoginModal closeModal={closeModal} handleRegister={handleRegister} />
       )}
 
+      {isCart && (
+        <CartModal closeModal={closeCartModal}/>
+      )}
 
       <Routes>
         <Route path="/" element={<Layout openModal={openModal} />}>

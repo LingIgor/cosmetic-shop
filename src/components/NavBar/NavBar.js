@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { CiUser } from 'react-icons/ci';
 import { BsHandbag } from 'react-icons/bs';
 
-export const NavBar = ({ openModal }) => {
+export const NavBar = ({ openModal, closeModal }) => {
   return (
     <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-end' }}>
       <nav style={{ display: 'flex', gap: '20px' }}>
@@ -13,10 +13,10 @@ export const NavBar = ({ openModal }) => {
       </nav>
       <div style={{ display: 'flex' }}>
         <Link>
-          <CiUser size={25} onClick={openModal} />
+          <CiUser size={25} onClick={() => openModal("CiUser")} />
         </Link>
         <Link>
-          <BsHandbag size={23} />
+          <BsHandbag size={23}  onClick={() => openModal("BsHandbag")}/>
         </Link>
       </div>
     </div>

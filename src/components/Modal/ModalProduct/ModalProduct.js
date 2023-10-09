@@ -97,7 +97,7 @@ const ProductModal = ({ closeModal, el }) => {
   
     return createPortal(
       <ModalWrapper onClick={handleBackdropClick} >
-        <ModalContent >
+        <ModalContent onClick={e => e.stopPropagation()}>
             <AiOutlineCloseCircle size={25} style={{position:"absolute", top:"0", right:"0",cursor:"pointer"}} onClick={closeModal}/>
           <ImageContainer>
             <Image src={img} alt="Product" />
