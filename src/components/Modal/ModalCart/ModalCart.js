@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import {RiDeleteBin5Line} from "react-icons/ri"
 import { productsList } from 'helpers/products';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeFromCart } from 'redux/CartSlise/CartSlice';
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -31,6 +33,9 @@ const ModalContent = styled.div`
 
 const CartModal = ({ closeModal }) => {
   const [counters, setCounters] = useState({});
+  const {cart} = useSelector(state => state)
+  const dispatch = useDispatch()
+  const productsInCart = productsList.filter(product => cart.includes(product.id));
 
   const increaseCount = productId => {
     setCounters(prevCounters => ({
@@ -68,10 +73,12 @@ const CartModal = ({ closeModal }) => {
     }
   };
 
-  const totalSum = productsList
-  .slice(-4)
-  .reverse()
-  .reduce((sum, el) => sum + el.price * (counters[el.id] || 1), 0);
+  const RemoveProduct = (id) => {
+    dispatch(removeFromCart(id))
+  }
+  
+
+  const totalSum = productsInCart.reduce((sum, el) => sum + el.price * (counters[el.id] || 1), 0);
 
 
   return createPortal(
@@ -100,9 +107,7 @@ const CartModal = ({ closeModal }) => {
             gap: '15px',
           }}
         >
-          {productsList
-            .slice(-4)
-            .reverse()
+          {productsInCart
             .map(el => (
               <li key={el.id} style={{ width: '100%', display: 'flex', justifyContent: "space-between" }}>
                 <img src={el.img} alt="product" style={{ width: '100px'}} />
@@ -127,7 +132,7 @@ const CartModal = ({ closeModal }) => {
                 <div>
                   <span>{el.price * (counters[el.id] || 1)}грн</span>                    
                   </div>
-                  <RiDeleteBin5Line size={17}/>
+                  <RiDeleteBin5Line size={17} onClick={() => RemoveProduct(el.id)}/>
 
               </li>
             ))}

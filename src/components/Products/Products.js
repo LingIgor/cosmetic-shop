@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import ProductModal from 'components/Modal/ModalProduct/ModalProduct';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from 'redux/CartSlise/CartSlice';
 
 const ProductCard = styled.div`
   width: 270px;
@@ -47,20 +49,31 @@ const ProductCard = styled.div`
 
 export const Products = ({el}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const {name, price, volume, img, category} =  el
+  const cart = useSelector(state => state.cart)
+  const dispatch = useDispatch()
+  console.log(cart)
+  const {name, price, volume, img, category, id} =  el
 
   const openModal = () => {
-    setIsModalOpen(true);
-  
+    setIsModalOpen(true);  
   };
 
   const closeModal = () => {
     console.log("close your fucking modal")
-    setIsModalOpen(false);
-    
+    setIsModalOpen(false);    
   };
 
+
+  const addProduct = id => {
+    if (cart.includes(id)) {    
+      return 
+    }     
+      dispatch(addToCart(id));
+  };
+
+
   return (
+    <div>
     <ProductCard onClick={openModal}>
       <img src={img} alt='product' />
       <div className="product-details">
@@ -72,10 +85,13 @@ export const Products = ({el}) => {
           <p>{category}</p>
           <span>{volume}</span>
         </div>
+       
       </div>
 
       {isModalOpen && <ProductModal el={el} closeModal={closeModal} />}
     </ProductCard>
+    <button onClick={() => addProduct(id)}>Додати у кошик</button>
+    </div>
   );
 };
 
