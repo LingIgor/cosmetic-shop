@@ -31,7 +31,7 @@ const ModalContent = styled.div`
   overflow: auto;
 `;
 
-const CartModal = ({ closeModal }) => {
+const ModalCart = ({ closeModal }) => {
   const [counters, setCounters] = useState({});
   const {cart} = useSelector(state => state)
   const dispatch = useDispatch()
@@ -84,9 +84,7 @@ const CartModal = ({ closeModal }) => {
   return createPortal(
     <ModalWrapper onClick={handleBackdropClick}>
       <ModalContent>
-        <div >
-          <h1>Кошик</h1>
-          <AiOutlineCloseCircle
+      <AiOutlineCloseCircle
             size={25}
             style={{
               position: 'absolute',
@@ -96,6 +94,10 @@ const CartModal = ({ closeModal }) => {
             }}
             onClick={closeModal}
           />
+        {cart.length !== 0 ? <div>
+        <div >
+          <h1>Кошик</h1>
+          
         </div>
 
       <div style={{display:"flex"}}>
@@ -141,12 +143,12 @@ const CartModal = ({ closeModal }) => {
         <p>Загальна сума: {totalSum}</p>
         <button type='button'>Оформити замовлення</button>
         </div>
-      </div>
-        
+      </div>        
+        </div>: <div><h1>Sorry your bag is empty</h1></div>}
       </ModalContent>
     </ModalWrapper>,
     document.getElementById('portal-root-cart')
   );
 };
 
-export default CartModal;
+export default ModalCart;

@@ -3,13 +3,17 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout/Layout';
 import { Catalog } from 'pages/Home/Catalog';
 import { useState } from 'react';
-import LoginModal from 'components/Modal/ModalLogin/LoginModal';
-import CartModal from 'components/Modal/ModalCart/ModalCart';
+import ModalLogin from 'components/Modal/ModalLogin/ModalLogin';
+import ModalCart from 'components/Modal/ModalCart/ModalCart';
+import ModalFavorite from 'components/Modal/ModalFavorite/ModalFavorite';
+// import { useSelector } from 'react-redux';
 // import { Favorites } from 'pages/Favorites';
 
 export const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [isCart, setIsCart] = useState(false)
+  const [isFavorite, setIsFavorite] = useState(false)
+  // const {favorite, cart} = useSelector(state => state);
 
   const openModal = (iconType) => {
     if (iconType === "BsHandbag") {      
@@ -18,6 +22,9 @@ export const App = () => {
     if (iconType === "CiUser") {      
       setModalOpen(true);
     }      
+    if (iconType === "AiFillHeart") {      
+      setIsFavorite(true);
+    } 
   };
 
   
@@ -26,6 +33,11 @@ const closeCartModal = () => {
 }
   const closeModal = () => {
     setModalOpen(false);
+
+  };
+  const closeFavorite = () => {
+  
+    setIsFavorite(false);
 
   };
 
@@ -37,12 +49,14 @@ const closeCartModal = () => {
   return (
     <div>
       {isModalOpen && (
-        <LoginModal closeModal={closeModal} handleRegister={handleRegister} />
+        <ModalLogin closeModal={closeModal} handleRegister={handleRegister} />
       )}
 
-      {isCart && (
-        <CartModal closeModal={closeCartModal}/>
+      {isCart  &&(
+        <ModalCart closeModal={closeCartModal}/>
       )}
+
+      {isFavorite && (<ModalFavorite closeModal={closeFavorite}/>)}
 
       <Routes>
         <Route path="/" element={<Layout openModal={openModal} />}>

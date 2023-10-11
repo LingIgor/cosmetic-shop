@@ -11,15 +11,17 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { favoriteSlice } from './FavoriteSlice/FavoriteSlice';
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['cart'],
+  whitelist: ['cart', 'favorite'],
 };
 
 const rootReducer = combineReducers({
   cart: cartSlice.reducer,
+  favorite: favoriteSlice.reducer,
 });
 
 const persistUsersReducer = persistReducer(persistConfig, rootReducer);

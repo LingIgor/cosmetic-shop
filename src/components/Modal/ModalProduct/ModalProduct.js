@@ -62,7 +62,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const ProductModal = ({ closeModal, el }) => {
+const ModalProduct = ({ closeModal, el }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     useEffect(() => {
@@ -124,4 +124,4 @@ const ProductModal = ({ closeModal, el }) => {
     );
   };
 
-export default ProductModal
+export default ModalProduct

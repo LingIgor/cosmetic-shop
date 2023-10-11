@@ -24,7 +24,7 @@ const ModalContent = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
-const LoginModal = ({ closeModal, handleRegister }) => {
+const ModalLogin = ({ closeModal, handleRegister }) => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(true);
 
   useEffect(() => {
@@ -75,4 +75,4 @@ const LoginModal = ({ closeModal, handleRegister }) => {
   );
 };
 
-export default LoginModal;
+export default ModalLogin;
