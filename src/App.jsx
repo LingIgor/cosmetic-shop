@@ -6,8 +6,9 @@ import { useState } from 'react';
 import ModalLogin from 'components/Modal/ModalLogin/ModalLogin';
 import ModalCart from 'components/Modal/ModalCart/ModalCart';
 import ModalFavorite from 'components/Modal/ModalFavorite/ModalFavorite';
-// import { useSelector } from 'react-redux';
-// import { Favorites } from 'pages/Favorites';
+import { DeliveryAndPay } from 'pages/Home/Delivery';
+import { AgreementPage } from 'pages/AgreementPage';
+
 
 export const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -62,6 +63,8 @@ const closeCartModal = () => {
         <Route path="/" element={<Layout openModal={openModal} />}>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/delivery" element={<DeliveryAndPay/>} />    
+          <Route path="/agreement" element={<AgreementPage/>} />          
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

@@ -1,22 +1,24 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { CiUser } from 'react-icons/ci';
 import { BsHandbag } from 'react-icons/bs';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 
 export const NavBar = ({ openModal, closeModal }) => {
-  const {favorite, cart} = useSelector(state => state);
-  const location = useLocation();
-  const isCatalogPage = location.pathname === '/catalog';
- 
+  const { favorite, cart } = useSelector(state => state);
+  
 
   return (
     <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-end' }}>
       <nav style={{ display: 'flex', gap: '20px' }}>
-        <Link to={isCatalogPage ? '/' : '/catalog'}>
-          {isCatalogPage ? 'Домашня' : 'Каталог'}
+      <Link to={"/"}>
+        Домашня
         </Link>
+        <Link to={"/catalog"}>
+        Каталог
+        </Link>
+        <Link to={"/delivery"}>Доставка і оплата</Link>
         <Link>Про нас</Link>
         <Link>Контакти</Link>
       </nav>

@@ -6,6 +6,7 @@ import {RiDeleteBin5Line} from "react-icons/ri"
 import { productsList } from 'helpers/products';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart } from 'redux/CartSlise/CartSlice';
+import { Link } from 'react-router-dom';
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -141,7 +142,7 @@ const ModalCart = ({ closeModal }) => {
         </ul>
         <div style={{width:"200px", height:"150px", background:"rgb(0 0 0 / 4%)"}}>
         <p>Загальна сума: {totalSum}</p>
-        <button type='button'>Оформити замовлення</button>
+        <Link to={"/agreement"}>Оформити замовлення</Link>
         </div>
       </div>        
         </div>: <div><h1>Sorry your bag is empty</h1></div>}
