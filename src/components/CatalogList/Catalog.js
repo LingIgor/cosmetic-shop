@@ -1,16 +1,16 @@
 import React from 'react';
 import { productsList } from 'helpers/products';
 import { Products } from 'components/Products/Products';
+import { CatalogBox } from './CatalogList.styled';
 
 
 export const CatalogList = () => {
 
   return (
-    <div style={{display:"flex", maxWidth:"1200px", flexWrap: "wrap",
-    gap: "30px"}}>
+    <CatalogBox >
       {productsList.map((el)=> (        
         <Products key={el.id} el={el}/>         
       ))}          
-    </div>
+    </CatalogBox>
   );
 };

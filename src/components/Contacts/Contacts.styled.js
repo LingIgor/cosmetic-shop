@@ -10,3 +10,12 @@ export const ContactsContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const Title = styled.h2`
+  font-size: 32px;
+`;
+
+export const ContactsList = styled.ul`
+  display: flex;
+  gap: 10px;
+`;

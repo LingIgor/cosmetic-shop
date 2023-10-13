@@ -6,6 +6,11 @@ export const Title = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  button {
+    width: 163px;
+    height: 41px;
+  }
 `;
 
 export const AppContainer = styled.div`
@@ -21,3 +26,16 @@ export const AppContainer = styled.div`
   border-radius: 0;
   z-index: -1;
 `;
+
+
+export const MainSectionImg = styled.img`
+width: 330px;
+`
+
+export const MainSectionBox = styled.div`
+display: flex;
+`
+
+// export const mainSectionBox = styled.div`
+// display: flex;
+// `

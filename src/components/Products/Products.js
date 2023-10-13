@@ -55,7 +55,6 @@ export const Products = ({ el }) => {
   const cart = useSelector(state => state.cart);
   const favorite = useSelector(state => state.favorite);
   const dispatch = useDispatch();
-  console.log(cart);
   const { name, price, volume, img, category, id } = el;
 
   const openModal = () => {

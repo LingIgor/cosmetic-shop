@@ -1,16 +1,15 @@
 import React from 'react';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
-import { ContactsContainer } from './Contacts.styled';
+import { ContactsContainer,Title, ContactsList } from './Contacts.styled';
 
-const Contacts = () => {
+export const Contacts = () => {
   return (
     <ContactsContainer>
-      <h2 style={{ fontSize: '32px' }}>Назва Контакти</h2>
+      <Title>Назва Контакти</Title>
       <address>
         <p>Адреса:</p>
-        <p>
-          {' '}
+        <p>        
           м.Одеса, <br /> вул. Пушкінська 12
         </p>
       </address>
@@ -21,7 +20,7 @@ const Contacts = () => {
         <a href="mailto:kosmetingsobaka@jamil.com">kosmeting@gmail.com</a>
       </p>
 
-      <ul style={{ display: 'flex', gap: '10px' }}>
+      <ContactsList>
         <li>
           <a href="http//:google.com" target="_blank" rel="noopener noreferrer">
             <FaFacebook size={25} />
@@ -37,9 +36,8 @@ const Contacts = () => {
             <FaTwitter size={25} />
           </a>
         </li>
-      </ul>
+      </ContactsList>
     </ContactsContainer>
   );
 };
 
-export default Contacts;

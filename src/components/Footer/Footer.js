@@ -3,82 +3,57 @@ import { FooterConteiner } from './Footer.styled';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import {
+  FooterBox,
+  Box,
+  FooterListLink,
+  FooterListSoc,
+  UnderFooter,
+} from './Footer.styled';
+
+const mainLink = [
+  { name: 'Каталог', rout: '/catalog' },
+  { name: 'О Нас', rout: '/' },
+  { name: 'Магазин', rout: '/catalog' },
+  { name: 'Контакти', rout: '/' },
+];
+
+const socialLinks = [
+  { href: 'http://google.com', icon: <FaFacebook size={25} /> },
+  { href: 'http://google.com', icon: <AiFillInstagram size={28} /> },
+  { href: 'http://google.com', icon: <FaTwitter size={25} /> },
+];
 
 export const Footer = () => {
   return (
     <FooterConteiner>
-      <div
-        style={{
-          padding: ' 40px 98px',
-          alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'space-between',
-          borderBottom: '1px solid #D1D1D1',
-        }}
-      >
-        <div style={{ display: 'flex', gap: '70px' }}>
+      <FooterBox>
+        <Box>
           <Link>COSMETING</Link>
-          <ul style={{ display: 'flex', gap: '10px' }}>
-            <li>
-              <Link>Каталог</Link>
+          <FooterListLink>
+            {mainLink.map(({ name, rout }, index) => {
+              return (
+                <li key={index}>
+                  <Link to={rout}>{name}</Link>
+                </li>
+              );
+            })}
+          </FooterListLink>
+        </Box>
+        <FooterListSoc>
+        {socialLinks.map(({href, icon}, index) => (
+            <li key={index}>
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {icon}
+              </a>
             </li>
-            <li>
-              <Link>О Нас</Link>
-            </li>
-            <li>
-              <Link>Магазин</Link>
-            </li>
-            <li>
-              <Link>Контакти</Link>
-            </li>
-          </ul>
-        </div>
-
-        <ul style={{ display: 'flex', gap: '10px' }}>
-          <li>
-            <a
-              href="http//:google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebook size={25} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="http//:google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiFillInstagram size={28} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="http//:google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter size={25} />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div
-        style={{
-          // height: '40px',
-          background: '#F4F1ED',
-          padding: ' 22px 98px',
-          alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'space-between',
-          color: '#959595',
-          fontWeight: '600',
-        }}
-      >
+          ))}
+        </FooterListSoc>
+      </FooterBox>
+      <UnderFooter>
         <p>Cosmeting &copy; 2023 Все права защищены</p>
         <p>Политика конфиденциальности</p>
-      </div>
+      </UnderFooter>
     </FooterConteiner>
   );
 };

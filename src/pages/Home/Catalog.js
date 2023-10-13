@@ -1,8 +1,9 @@
 import React from 'react';
-import Contacts from 'components/Contacts/Contacts';
+
 import { SubscribeSection } from 'components/HomeSections/SubscribeSection/SubscribeSection';
 import { CatalogList } from 'components/CatalogList/Catalog';
 import { JustSeeSection } from 'components/CatalogSection/JustSeeSection/JustSeeSection';
+import { Contacts } from 'components/Contacts/Contacts';
 
 export const Catalog = () => {
   return (

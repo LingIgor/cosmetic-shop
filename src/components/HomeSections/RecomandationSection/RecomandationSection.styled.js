@@ -13,3 +13,20 @@ export const TextBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
+
+
+export const RecomBox = styled.div`
+ display: flex;
+        margin-top: 210px;
+        padding: 0 28px;
+        align-items: center;
+
+
+`
+
+
+export const RecomList = styled.ul`
+display: flex; gap: 30px;
+
+
+`
