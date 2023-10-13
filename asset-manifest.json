@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cosmetic-shop/static/css/main.e6ac4129.css",
-    "main.js": "/cosmetic-shop/static/js/main.f336ac71.js",
+    "main.js": "/cosmetic-shop/static/js/main.41d08938.js",
     "static/media/History.png": "/cosmetic-shop/static/media/History.43e1ba0afd9ea7c6e559.png",
     "static/media/reklama.png": "/cosmetic-shop/static/media/reklama.201f774589a0a65df4a7.png",
     "static/media/CarePhoto.png": "/cosmetic-shop/static/media/CarePhoto.8f64c9d3f69bdba77c2a.png",
@@ -25,12 +25,14 @@
     "static/media/Product1.png": "/cosmetic-shop/static/media/Product1.5af3adf553d9f1ec3690.png",
     "static/media/Subscribe6.png": "/cosmetic-shop/static/media/Subscribe6.d3548a13510e2bf320a6.png",
     "static/media/Product5.png": "/cosmetic-shop/static/media/Product5.1a96e3b1944275be5ffa.png",
+    "static/media/Ukrposhta.png": "/cosmetic-shop/static/media/Ukrposhta.0d50abb372bcb5cc0f32.png",
+    "static/media/nova-poshta.png": "/cosmetic-shop/static/media/nova-poshta.77bf1b5ea0b0e8806d81.png",
     "index.html": "/cosmetic-shop/index.html",
     "main.e6ac4129.css.map": "/cosmetic-shop/static/css/main.e6ac4129.css.map",
-    "main.f336ac71.js.map": "/cosmetic-shop/static/js/main.f336ac71.js.map"
+    "main.41d08938.js.map": "/cosmetic-shop/static/js/main.41d08938.js.map"
   },
   "entrypoints": [
     "static/css/main.e6ac4129.css",
-    "static/js/main.f336ac71.js"
+    "static/js/main.41d08938.js"
   ]
 }
