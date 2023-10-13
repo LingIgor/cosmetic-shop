@@ -1,8 +1,6 @@
 import React from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Field, Form, ErrorMessage} from 'formik';
 import Select from 'react-select';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 const cities = [
   { value: 'kyiv', label: 'Київ' },
@@ -11,24 +9,21 @@ const cities = [
 ];
 
 const Agreement = () => {
-    const [selectedOption, setSelectedOption] = useState(null)
+    // const [selectedOption, setSelectedOption] = useState(null)
 
-console.log(selectedOption)
+// console.log(selectedOption)
 
-useEffect(() => {
-    console.log(selectedOption)
-},[])
 
   const initialValues = {
     firstName: '',
     lastName: '',
     phone: '',
     email: '',
-    city: null
+    city: { value: '', label: '' }
   };
 
   const onSubmit = (values) => {
-    // Перетворюємо об'єкт міста на рядок
+        // Перетворюємо об'єкт міста на рядок
     console.log(values)
   };
 
@@ -63,10 +58,10 @@ useEffect(() => {
           <div>
             <label htmlFor="city">Місто:</label>
 
-            <Select
+            <Field
+    as={Select}
     isSearchable={true}
-    value={selectedOption}
-    onChange={(option) => setSelectedOption(option)}
+    name="city"
     options={cities}
     placeholder="Виберіть місто"
   />
