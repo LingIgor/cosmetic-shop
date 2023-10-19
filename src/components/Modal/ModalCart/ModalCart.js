@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-
-import { RiDeleteBin5Line } from 'react-icons/ri';
 import { productsList } from 'helpers/products';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart } from 'redux/CartSlise/CartSlice';
-import { Link } from 'react-router-dom';
+
 import {
   ModalWrapper,
   ModalContent,
@@ -15,6 +13,10 @@ import {
   CartItem,
   CartCounter,
   CartOrder,
+  Order,
+  BoxOrder,
+  TrashIcon
+
 } from './ModalCart.styled';
 
 const ModalCart = ({ closeModal }) => {
@@ -77,7 +79,7 @@ const ModalCart = ({ closeModal }) => {
         {cart.length !== 0 ? (
           <div>
             <div>
-              <h1>Кошик</h1>
+              <h1 style={{marginBottom:"40px"}}>Кошик</h1>
             </div>
             <Box>
               <CartList>
@@ -86,25 +88,26 @@ const ModalCart = ({ closeModal }) => {
                     <img src={el.img} alt="product" />
                     <div>
                       <div>
-                        <h2>{el.name}</h2>
+                        <h2 style={{marginBottom:"20px"}}>{el.name}</h2>
                         <p>{el.category}</p>
                         <span>{el.volume}</span>
                       </div>
                     </div>
                     <CartCounter>
                       <button
+                      style={{width:"30px", height:"30px"}}
                         onClick={() => decreaseCount(el.id)}
                         disabled={counters[el.id] === 1}
                       >
                         -
                       </button>
                       <p> {counters[el.id] || 1}</p>
-                      <button onClick={() => increaseCount(el.id)}>+</button>
+                      <button style={{width:"30px", height:"30px"}} onClick={() => increaseCount(el.id)}>+</button>
                     </CartCounter>
                     <div>
                       <span>{el.price * (counters[el.id] || 1)}грн</span>
                     </div>
-                    <RiDeleteBin5Line
+                    <TrashIcon
                       size={17}
                       onClick={() => RemoveProduct(el.id)}
                     />
@@ -112,10 +115,13 @@ const ModalCart = ({ closeModal }) => {
                 ))}
               </CartList>
               <CartOrder>
-                <p>Загальна сума: {totalSum}</p>
-                <Link to={'/agreement'}>Оформити замовлення</Link>
-              </CartOrder>
-            </Box>
+              <BoxOrder>
+              <p>Загальна сума: </p>
+                <span>{totalSum} ₴</span>
+              </BoxOrder>
+                <Order to={'/agreement'}>Оформити замовлення</Order>
+              </CartOrder>              
+            </Box>            
           </div>
         ) : (
           <div>
