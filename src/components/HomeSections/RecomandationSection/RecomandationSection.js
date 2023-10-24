@@ -1,32 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import foto from '../../../images/MainSectionFoto1.png';
-import { Item, TextBox, RecomBox, RecomList } from './RecomandationSection.styled';
 
-const best = [
-  {
-    img: foto,
-    title: 'hight',
-    text: 'Крем для лиця',
-  },
-  {
-    img: foto,
-    title: 'hight',
-    text: 'Крем для лиця',
-  },
-  {
-    img: foto,
-    title: 'hight',
-    text: 'Крем для лиця',
-  },
-  {
-    img: foto,
-    title: 'hig',
-    text: 'Крем для лиця',
-  },
-];
+
+import {  RecomBox, RecomList } from './RecomandationSection.styled';
+import { productsList } from 'helpers/products';
+import { Products } from 'components/Products/Products';
+
+
 
 export const RecomendationSection = () => {
+
+
+  const bestProducts = productsList.filter(product => product.best === true);
+
+ 
+
+
   return (
     <RecomBox>
       <div>
@@ -35,18 +23,9 @@ export const RecomendationSection = () => {
         <button>Смотреть все</button>
       </div>
       <RecomList>
-        {best.map(({ img, title, text }, index) => {
-          return (
-            <Item key={index}>
-              <img src={img} alt="foto" />
-              <TextBox>
-                <h3>{title}</h3>
-                <p>{text}</p>
-                <Link>Детальніше</Link>
-              </TextBox>
-            </Item>
-          );
-        })}
+      {bestProducts.map((el)=> (        
+        <Products key={el.id} el={el}/>         
+      ))}  
       </RecomList>
     </RecomBox>
   );

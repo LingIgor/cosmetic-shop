@@ -19,6 +19,7 @@ export const productsList = [
     img: product,
     volume: '50ml',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    best: false,
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ export const productsList = [
     volume: '30ml',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      best: false,
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ export const productsList = [
     img: product2,
     volume: '50ml',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    best: false,
   },
   {
     id: 4,
@@ -47,6 +50,7 @@ export const productsList = [
     img: product3,
     volume: '50ml',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    best: true,
   },
   {
     id: 5,
@@ -57,6 +61,7 @@ export const productsList = [
     volume: '30ml',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      best: false,
   },
   {
     id: 6,
@@ -67,6 +72,7 @@ export const productsList = [
     volume: '30ml',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      best: false,
   },
   {
     id: 7,
@@ -77,6 +83,7 @@ export const productsList = [
     volume: '30ml',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      best: true,
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ export const productsList = [
     img: product7,
     volume: '50ml',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    best: false,
   },
   {
     id: 9,
@@ -95,6 +103,7 @@ export const productsList = [
     img: product8,
     volume: '50ml',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    best: false,
   },
   {
     id: 10,
@@ -105,6 +114,7 @@ export const productsList = [
     volume: '30ml',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      best: true,
   },
   {
     id: 11,
@@ -115,6 +125,7 @@ export const productsList = [
     volume: '30ml',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      best: true,
   },
   {
     id: 12,
@@ -125,5 +136,6 @@ export const productsList = [
     volume: '30ml',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      best: false,
   },
 ];

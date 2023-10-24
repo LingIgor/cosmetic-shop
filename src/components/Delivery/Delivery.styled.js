@@ -14,8 +14,16 @@ export const DeliveryItem = styled.li`
   text-align: center;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+
+
+  &:hover{
+    border: 1px solid rgba(205 56 201 / 30%);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 30px rgba(205 56 201 / 30%);
+  }
 `;
 
 export const DeliveryBox = styled.div`
-  width: 60%;
+  width: 90%;
 `;

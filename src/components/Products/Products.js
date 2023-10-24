@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from 'redux/CartSlise/CartSlice';
 import ModalProduct from 'components/Modal/ModalProduct/ModalProduct';
@@ -8,46 +7,9 @@ import {
   addToFavorite,
   removeFromFavorite,
 } from 'redux/FavoriteSlice/FavoriteSlice';
+import { ProductCard } from './Produst.styled';
 
-const ProductCard = styled.div`
-  width: 270px;
-  height: 350px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
 
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  div.product-details {
-    position: absolute;
-    top: 82%;
-    width: 250px;
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      h2 {
-        margin: 0;
-      }
-    }
-  }
-`;
 
 export const Products = ({ el }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -101,7 +63,7 @@ export const Products = ({ el }) => {
           }}
         >
           {favorite.includes(id) ? (
-            <AiFillHeart size={20} color="red" />
+            <AiFillHeart size={20} color="rgb(221 21 121)" />
           ) : (
             <AiOutlineHeart size={20} color="black" />
           )}

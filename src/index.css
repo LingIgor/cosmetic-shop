@@ -1,21 +1,37 @@
 @import-normalize; /* bring in normalize.css styles */
 
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Cormorant Infant';
+  src: url('../public/fonts/Cormorant_Infant/CormorantInfant-SemiBoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant Infant';
+  src: url('../public/fonts/Cormorant_Infant/CormorantInfant-Bold.ttf') format('truetype');
+  font-weight: Bold;
+  font-style: normal;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  margin: 0;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Cormorant Infant', serif;
+  font-weight: normal;
   background-color: #fff;
 
   max-width: 1400px;
   min-height: 100vh;
   letter-spacing: 0.02em;
-  font-size: 14px;
+  font-size: 20px;
   margin: 0 auto;
   transition: 1.5s;
   border: 1px solid red;
@@ -24,10 +40,6 @@ body {
   scrollbar-width: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 main {
   display: flex;
@@ -39,13 +51,19 @@ main {
   margin: 0 auto;
 }
 
-a,
+
 h1,
 h2,
 h3,
-h4,
-p {
+h4
+ {
   margin: 0px;
+  font-weight: Bold;
+}
+
+a,p{
+  margin: 0px;
+
 }
 
 ul,
