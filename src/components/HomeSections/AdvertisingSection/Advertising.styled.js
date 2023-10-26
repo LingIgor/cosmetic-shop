@@ -19,11 +19,8 @@ export const Box = styled.div`
 export const InformBox = styled.div`
   width: 300px;
   position: absolute;
-  top: 50%;
-  left: 60%;
+  top: 30%;
+  left: 70%;
 `;
 
-export const AdvertisingBtn = styled.button`
-  width: 163px;
-  height: 41px;
-`;
+

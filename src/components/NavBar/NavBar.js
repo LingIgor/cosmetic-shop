@@ -15,8 +15,8 @@ export const NavBar = ({ openModal, closeModal }) => {
         <StyleLink to="/">Домашня</StyleLink>
         <StyleLink to="/catalog">Каталог</StyleLink>
         <StyleLink to="/delivery">Доставка і оплата</StyleLink>
-        <StyleLink to="/">Про нас</StyleLink>
-        <StyleLink to="/">Контакти</StyleLink>
+        <StyleLink to="/about">Про нас</StyleLink>
+        <StyleLink to="/contacts">Контакти</StyleLink>
       </nav>
       <IconContainer>
         <IconLink>

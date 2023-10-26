@@ -6,6 +6,7 @@ import photo4 from '../../../images/Subscribe4.png';
 import photo5 from '../../../images/Subscribe5.png';
 import photo6 from '../../../images/Subscribe6.png';
 import { SubMainBox, SubList, BoxText } from './SubscribeSection.styled';
+import { Btn } from '../MainSection/MainSection.styled';
 
 const photos = [photo1, photo2, photo3, photo4, photo5, photo6];
 
@@ -22,11 +23,11 @@ export const SubscribeSection = () => {
 
       <BoxText>
         <h2>Присоединяйтесь к нам</h2>
-        <p>
+        <p style={{marginBottom:"20px"}}>
           Подпишитесь на наш аккаунт @marooncare и узнавайте о новиках и акциях
           первыми
         </p>
-        <button>Подписаться</button>
+        <Btn>Подписаться</Btn>
       </BoxText>
     </SubMainBox>
   );

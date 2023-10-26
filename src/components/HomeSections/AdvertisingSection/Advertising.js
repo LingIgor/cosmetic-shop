@@ -1,6 +1,7 @@
 import React from 'react';
 import { BackPhoto } from './Advertising.styled';
-import { Box, InformBox, AdvertisingBtn } from './Advertising.styled';
+import { Box, InformBox } from './Advertising.styled';
+import { Btn } from '../MainSection/MainSection.styled';
 
 export const AdvertisingSection = () => {
   return (
@@ -8,10 +9,10 @@ export const AdvertisingSection = () => {
       <BackPhoto />
       <InformBox>
         <h2>Встречайте весну вместе с нами</h2>
-        <p>
+        <p style={{marginBottom:"20px"}}>
           Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой
         </p>
-        <AdvertisingBtn> Подробнее</AdvertisingBtn>
+        <Btn> Подробнее</Btn>
       </InformBox>
     </Box>
   );

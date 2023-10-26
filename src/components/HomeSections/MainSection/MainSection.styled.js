@@ -27,15 +27,32 @@ export const AppContainer = styled.div`
   z-index: -1;
 `;
 
-
 export const MainSectionImg = styled.img`
-width: 330px;
-`
+  width: 330px;
+`;
 
 export const MainSectionBox = styled.div`
-display: flex;
-`
+  display: flex;
+  gap: 20px;
+`;
 
-// export const mainSectionBox = styled.div`
-// display: flex;
-// `
+export const Btn = styled.button`
+  width: 163px;
+  height: 41px;
+  border: none;
+  border-radius: 10px;
+  background: pink;
+  color: white;
+  font-size: 22px;
+  font-family: 'Cormorant Infant';
+  box-shadow: 3px 3px 10px 3px rgb(167 143 145 / 68%);
+
+
+  &:hover {
+    background-color: #ef69b5; 
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(217, 83, 79, 0.8);
+
+
+  }
+`;

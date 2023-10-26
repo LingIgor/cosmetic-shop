@@ -33,8 +33,7 @@ body {
   letter-spacing: 0.02em;
   font-size: 20px;
   margin: 0 auto;
-  transition: 1.5s;
-  border: 1px solid red;
+  transition: 1.5s; 
 
   -ms-overflow-style: none;
   scrollbar-width: none;

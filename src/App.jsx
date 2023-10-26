@@ -8,6 +8,8 @@ import ModalCart from 'components/Modal/ModalCart/ModalCart';
 import ModalFavorite from 'components/Modal/ModalFavorite/ModalFavorite';
 import { DeliveryAndPay } from 'pages/Home/Delivery';
 import { AgreementPage } from 'pages/AgreementPage';
+import { ContactsPage } from 'pages/Home/Contacts';
+import { AboutPage } from 'pages/Home/AboutPage';
 
 
 export const App = () => {
@@ -64,7 +66,11 @@ const closeCartModal = () => {
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/delivery" element={<DeliveryAndPay/>} />    
-          <Route path="/agreement" element={<AgreementPage/>} />          
+          <Route path="/agreement" element={<AgreementPage/>} />  
+          <Route path="/contacts" element={<ContactsPage/>} />
+          <Route path="/about" element={<AboutPage/>} />  
+          
+                 
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

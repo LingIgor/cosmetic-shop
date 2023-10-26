@@ -23,7 +23,7 @@ export const productsList = [
   },
   {
     id: 2,
-    name: 'Крем для сраки ',
+    name: 'Крем для тіла ',
     price: 300,
     category: 'для лиця',
     img: product1,
@@ -54,7 +54,7 @@ export const productsList = [
   },
   {
     id: 5,
-    name: 'Крем для сраки ',
+    name: 'Крем для тіла ',
     price: 300,
     category: 'для лиця',
     img: product4,
@@ -65,7 +65,7 @@ export const productsList = [
   },
   {
     id: 6,
-    name: 'Крем для сраки ',
+    name: 'Крем для тіла ',
     price: 300,
     category: 'для лиця',
     img: product5,
@@ -76,7 +76,7 @@ export const productsList = [
   },
   {
     id: 7,
-    name: 'Крем для сраки ',
+    name: 'Крем для тіла ',
     price: 300,
     category: 'для лиця',
     img: product6,
@@ -107,7 +107,7 @@ export const productsList = [
   },
   {
     id: 10,
-    name: 'Крем для сраки ',
+    name: 'Крем для тіла ',
     price: 300,
     category: 'для лиця',
     img: product9,
@@ -118,7 +118,7 @@ export const productsList = [
   },
   {
     id: 11,
-    name: 'Крем для сраки ',
+    name: 'Крем для тіла ',
     price: 300,
     category: 'для лиця',
     img: product10,
@@ -129,7 +129,7 @@ export const productsList = [
   },
   {
     id: 12,
-    name: 'Крем для сраки ',
+    name: 'Крем для тіла ',
     price: 300,
     category: 'для лиця',
     img: product3,

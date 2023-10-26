@@ -4,6 +4,7 @@ import React from 'react';
 import {  RecomBox, RecomList } from './RecomandationSection.styled';
 import { productsList } from 'helpers/products';
 import { Products } from 'components/Products/Products';
+import { Btn } from '../MainSection/MainSection.styled';
 
 
 
@@ -19,8 +20,8 @@ export const RecomendationSection = () => {
     <RecomBox>
       <div>
         <h2>Бестселлеры</h2>
-        <p>Легендарные продукты, завоевавшие любовь наших клиентов</p>
-        <button>Смотреть все</button>
+        <p style={{marginBottom:"20px"}}>Легендарные продукты, завоевавшие любовь наших клиентов</p>
+        <Btn>Смотреть все</Btn>
       </div>
       <RecomList>
       {bestProducts.map((el)=> (        
