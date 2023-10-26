@@ -8,7 +8,7 @@ import { Contacts } from 'components/Contacts/Contacts';
 export const Catalog = () => {
   return (
     <>
-      <h1>Catalog</h1>
+      <h1>Каталог</h1>
       <CatalogList />
       <JustSeeSection />
       <SubscribeSection />

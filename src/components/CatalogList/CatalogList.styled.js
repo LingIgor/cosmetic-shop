@@ -5,4 +5,5 @@ export const CatalogBox = styled.div`
   max-width: 1200px;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 30px;
 `;

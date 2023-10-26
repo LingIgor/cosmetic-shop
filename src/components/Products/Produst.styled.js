@@ -1,11 +1,9 @@
-import styled from "styled-components";
-
-
-
+import styled from 'styled-components';
 
 export const ProductCard = styled.div`
   width: 270px;
   height: 350px;
+  border-radius: 10px;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -24,9 +22,10 @@ export const ProductCard = styled.div`
 
   div.product-details {
     position: absolute;
-    top: 75%;
+    top: 72%;
     width: 250px;
     left: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,5 +40,21 @@ export const ProductCard = styled.div`
         font-size: 25px;
       }
     }
+  }
+`;
+
+export const BtnAdd = styled.button`
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  background: pink;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ef69b5;
+    transform: scale(1.05) translate(0, -5px);
   }
 `;

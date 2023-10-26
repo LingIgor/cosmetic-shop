@@ -5,6 +5,7 @@ export const SubMainBox = styled.div`
   align-items: center;
   gap: 71px;
   margin-top: 140px;
+  margin-bottom: 140px;
 `;
 
 export const SubList = styled.ul`
@@ -17,8 +18,6 @@ export const SubList = styled.ul`
   }
 `;
 
-
 export const BoxText = styled.div`
- width: 450px;
-
-`
+  width: 450px;
+`;

@@ -7,13 +7,10 @@ import {
   addToFavorite,
   removeFromFavorite,
 } from 'redux/FavoriteSlice/FavoriteSlice';
-import { ProductCard } from './Produst.styled';
-
-
+import { ProductCard, BtnAdd } from './Produst.styled';
 
 export const Products = ({ el }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [isModalFavorite, setIsModalFavorite] = useState(false);
   const cart = useSelector(state => state.cart);
   const favorite = useSelector(state => state.favorite);
   const dispatch = useDispatch();
@@ -77,14 +74,14 @@ export const Products = ({ el }) => {
             <p>{category}</p>
             <span>{volume}</span>
           </div>
-          <button
+          <BtnAdd
             onClick={e => {
               e.stopPropagation();
               addProduct(id);
             }}
           >
             Додати у кошик
-          </button>
+          </BtnAdd>
         </div>
 
         {isModalOpen && <ModalProduct el={el} closeModal={closeModal} />}

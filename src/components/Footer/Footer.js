@@ -1,8 +1,8 @@
 import React from 'react';
-import { FooterConteiner } from './Footer.styled';
-import { FaFacebook, FaTwitter } from 'react-icons/fa';
-import { AiFillInstagram } from 'react-icons/ai';
+import { FooterConteiner, FooterItemLink } from './Footer.styled';
+
 import { Link } from 'react-router-dom';
+import { Facebook, Twitter, Instagram } from './Footer.styled';
 import {
   FooterBox,
   Box,
@@ -10,6 +10,7 @@ import {
   FooterListSoc,
   UnderFooter,
 } from './Footer.styled';
+import { Logo } from 'components/Header/Header.styled';
 
 const mainLink = [
   { name: 'Каталог', rout: '/catalog' },
@@ -19,9 +20,9 @@ const mainLink = [
 ];
 
 const socialLinks = [
-  { href: 'http://google.com', icon: <FaFacebook size={25} /> },
-  { href: 'http://google.com', icon: <AiFillInstagram size={28} /> },
-  { href: 'http://google.com', icon: <FaTwitter size={25} /> },
+  { href: 'http://google.com', icon: <Facebook size={25} /> },
+  { href: 'http://google.com', icon: <Instagram size={30} /> },
+  { href: 'http://google.com', icon: <Twitter size={25} /> },
 ];
 
 export const Footer = () => {
@@ -29,19 +30,19 @@ export const Footer = () => {
     <FooterConteiner>
       <FooterBox>
         <Box>
-          <Link>COSMETING</Link>
+          <Logo>COSMETING</Logo>
           <FooterListLink>
             {mainLink.map(({ name, rout }, index) => {
               return (
-                <li key={index}>
+                <FooterItemLink key={index}>
                   <Link to={rout}>{name}</Link>
-                </li>
+                </FooterItemLink>
               );
             })}
           </FooterListLink>
         </Box>
         <FooterListSoc>
-        {socialLinks.map(({href, icon}, index) => (
+          {socialLinks.map(({ href, icon }, index) => (
             <li key={index}>
               <a href={href} target="_blank" rel="noopener noreferrer">
                 {icon}

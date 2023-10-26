@@ -14,19 +14,15 @@ export const TextBox = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-
 export const RecomBox = styled.div`
- display: flex;
-        margin-top: 210px;
-        padding: 0 28px;
-        align-items: center;
-
-
-`
-
+  display: flex;
+  margin-top: 210px;
+  padding: 0 28px;
+  align-items: center;
+  gap: 40px;
+`;
 
 export const RecomList = styled.ul`
-display: flex; gap: 30px;
-
-
-`
+  display: flex;
+  gap: 30px;
+`;
