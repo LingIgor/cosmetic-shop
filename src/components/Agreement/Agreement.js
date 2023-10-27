@@ -1,80 +1,135 @@
-import React from 'react';
-import { Formik, Field, Form, ErrorMessage} from 'formik';
+import React, { useEffect, useState } from 'react';
+import { Formik, Field, Form } from 'formik';
+import yourData from '../../cityes/city.json';
+// import * as Yup from 'yup';
 import Select from 'react-select';
 
-const cities = [
-  { value: 'kyiv', label: 'Київ' },
-  { value: 'lviv', label: 'Львів' },
-  // Додайте інші міста за необхідністю
-];
+import {
+  OrderFormContainer,
+  FormGroup,
+  Label,
+  Input,
+  CheckboxLabel,
+  CheckboxInput,
+  Button,
+} from './Agreement.styled'; // Додайте або імпортуйте стилізовані компоненти з попереднього коду
 
 const Agreement = () => {
-    // const [selectedOption, setSelectedOption] = useState(null)
-
-// console.log(selectedOption)
+  const [selectedRegion, setSelectedRegion] = useState('');
+  const [selectedCity, setSelectedCity] = useState('');
+  const [citiesOptions, setCitiesOptions] = useState([]);
 
 
   const initialValues = {
     firstName: '',
     lastName: '',
-    phone: '',
+    phoneNumber: '',
     email: '',
-    city: { value: '', label: '' }
+    region: selectedRegion,
+    city: selectedCity,
+    paymentMethod: 'card',
   };
 
-  const onSubmit = (values) => {
-        // Перетворюємо об'єкт міста на рядок
-    console.log(values)
+  const regionOptions = yourData[0].regions.map(city => ({
+    value: city.name,
+    label: city.name,
+  }));
+
+
+  const handleRegionChange = (selectedRegion) => {
+    setSelectedRegion(selectedRegion);
+    // Отримати міста для обраної області
+    const selectedCities = yourData[0].regions
+      .find(region => region.name === selectedRegion.value)?.cities || [];
+      console.log(selectedCities)
+    
+    // Оновити опції для другого селекту
+    const updatedCitiesOptions = selectedCities.map(city => ({
+      value: city.name,
+      label: city.name,
+    }));
+    setCitiesOptions(updatedCitiesOptions);
+
+    // Очистити обране місто
+    setSelectedCity('');
+  };
+
+
+
+
+
+  useEffect(() => {
+    console.log('Data:', yourData[0].regions);
+   
+  }, []);
+
+  const handleSubmit = (values, { setSubmitting }) => {   
+    values.region = selectedRegion.value;
+    values.city = selectedCity.value;
+    console.log('Form Data Submitted:', values);
+    setSubmitting(false);
   };
 
   return (
-    <div>
-      <Formik initialValues={initialValues} onSubmit={onSubmit}>
-        <Form>
-          <div>
-            <label htmlFor="firstName">Ім'я:</label>
-            <Field type="text" id="firstName" name="firstName" required />
-            <ErrorMessage name="firstName" component="div" />
-          </div>
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Form>
+        <OrderFormContainer>
+          <FormGroup>
+            <Label>Ім'я:</Label>
+            <Field type="text" name="firstName" as={Input} />
+          </FormGroup>
 
-          <div>
-            <label htmlFor="lastName">Фамілія:</label>
-            <Field type="text" id="lastName" name="lastName" required />
-            <ErrorMessage name="lastName" component="div" />
-          </div>
+          <FormGroup>
+            <Label>Фамілія:</Label>
+            <Field type="text" name="lastName" as={Input} />
+          </FormGroup>
 
-          <div>
-            <label htmlFor="phone">Телефон:</label>
-            <Field type="tel" id="phone" name="phone" required />
-            <ErrorMessage name="phone" component="div" />
-          </div>
+          <FormGroup>
+            <Label>Номер телефону:</Label>
+            <Field type="tel" name="phoneNumber" as={Input} />
+          </FormGroup>
 
-          <div>
-            <label htmlFor="email">Емейл:</label>
-            <Field type="email" id="email" name="email" required />
-            <ErrorMessage name="email" component="div" />
-          </div>
+          <FormGroup>
+            <Label>Email:</Label>
+            <Field type="email" name="email" as={Input} />
+          </FormGroup>
 
-          <div>
-            <label htmlFor="city">Місто:</label>
+          <FormGroup>
+            <Label>Область:</Label>
 
-            <Field
-    as={Select}
-    isSearchable={true}
-    name="city"
-    options={cities}
-    placeholder="Виберіть місто"
-  />
-            
-            <ErrorMessage name="city" component="div" />
-          </div>
+            <Select
+                value={selectedRegion}
+                onChange={handleRegionChange}
+                options={regionOptions}
+              />
+          </FormGroup>
 
-          <div>
-            <button type="submit">Відправити</button>
-          </div>
-        </Form>
-      </Formik>
-    </div>
+          <FormGroup>
+            <Label>Місто:</Label>
+
+            <Select
+                value={selectedCity}
+                onChange={setSelectedCity}
+                options={citiesOptions}
+              />
+          </FormGroup>
+
+          <FormGroup>
+            <CheckboxLabel>
+              <Field
+                type="checkbox"
+                name="paymentMethod"
+                id="paymentMethod"
+                as={CheckboxInput}
+              />
+              Оплата на пошті
+            </CheckboxLabel>
+          </FormGroup>
+
+          <Button type="submit">Замовити</Button>
+        </OrderFormContainer>
+      </Form>
+    </Formik>
   );
 };
 
