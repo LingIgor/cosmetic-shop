@@ -11,8 +11,7 @@ import { ProductCard, BtnAdd } from './Produst.styled';
 
 export const Products = ({ el }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const cart = useSelector(state => state.cart);
-  const favorite = useSelector(state => state.favorite);
+  const { cart, favorite } = useSelector(state => state);
   const dispatch = useDispatch();
   const { name, price, volume, img, category, id } = el;
 

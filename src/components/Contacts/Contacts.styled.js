@@ -56,7 +56,7 @@ export const Address = styled.address`
   }
 `;
 
-export const ContactInfo = styled.p`
+export const ContactInfo = styled.div`
   display: flex;
   gap: 10px;
   color: #555;

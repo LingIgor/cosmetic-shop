@@ -23,7 +23,7 @@ export const SubscribeSection = () => {
 
       <BoxText>
         <h2>Присоединяйтесь к нам</h2>
-        <p style={{marginBottom:"20px"}}>
+        <p style={{ marginBottom: '20px' }}>
           Подпишитесь на наш аккаунт @marooncare и узнавайте о новиках и акциях
           первыми
         </p>
