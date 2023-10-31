@@ -9,12 +9,37 @@ export const BackPhoto = styled.div`
   height: 400px;
 `;
 
-export const Box = styled.div`
+export const Section = styled.div`
   position: relative;
-  width: 100%;
-  height: 400px;
-  margin-top: 165px;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+@media screen and (min-width: 1200px) { 
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+ 
 `;
+
+
+export const Container = styled.div`
+ margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+
+
+`
 
 export const InformBox = styled.div`
   width: 300px;
@@ -22,5 +47,3 @@ export const InformBox = styled.div`
   top: 30%;
   left: 70%;
 `;
-
-

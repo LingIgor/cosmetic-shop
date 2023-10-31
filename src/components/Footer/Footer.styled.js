@@ -6,14 +6,36 @@ import { AiFillInstagram } from 'react-icons/ai';
 export const FooterConteiner = styled.div`
   margin-top: 140px;
   background-color: #f4f1ed;
+
+  @media (max-width: 767px) {
+    margin-top: 100px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 120px;
+  }
+
 `;
 
 export const FooterBox = styled.div`
-  padding: 40px 98px;
+  padding: 40px 100px;
   align-items: center;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #d1d1d1;
+
+
+
+  @media (max-width: 767px) {
+    padding: 20px 60px;
+    align-items: center;
+  display: flex;
+  flex-direction: column;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 30px 80px;
+  }
 `;
 
 export const Box = styled.div`

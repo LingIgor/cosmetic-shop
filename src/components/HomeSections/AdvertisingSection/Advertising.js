@@ -1,12 +1,13 @@
 import React from 'react';
 import { BackPhoto } from './Advertising.styled';
-import { Box, InformBox } from './Advertising.styled';
+import { Section, InformBox, Container } from './Advertising.styled';
 import { Btn } from '../MainSection/MainSection.styled';
 
 export const AdvertisingSection = () => {
   return (
-    <Box>
+    <Section>
       <BackPhoto />
+      <Container>
       <InformBox>
         <h2>Встречайте весну вместе с нами</h2>
         <p style={{marginBottom:"20px"}}>
@@ -14,6 +15,7 @@ export const AdvertisingSection = () => {
         </p>
         <Btn> Подробнее</Btn>
       </InformBox>
-    </Box>
+      </Container>
+    </Section>
   );
 };

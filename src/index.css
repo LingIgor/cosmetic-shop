@@ -26,9 +26,7 @@ body {
   margin: 0;
   font-family: 'Cormorant Infant', serif;
   font-weight: normal;
-  background-color: #fff;
-
-  max-width: 1400px;
+  background-color: #fff; 
   min-height: 100vh;
   letter-spacing: 0.02em;
   font-size: 20px;
