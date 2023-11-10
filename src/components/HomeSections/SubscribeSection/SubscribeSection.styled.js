@@ -27,7 +27,7 @@ export const SubList = styled.ul`
     width: 233px;
 
     @media screen and (max-width: 767px) {
-      width: 200px;
+      max-width: 150px;
     }
   }
 `;

@@ -35,8 +35,9 @@ export const TextBox = styled.div`
 
   @media screen and (max-width: 767px) {
     width: 70%;
-    top: 5%;
-    left: 13%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-items: normal;
   }
 
