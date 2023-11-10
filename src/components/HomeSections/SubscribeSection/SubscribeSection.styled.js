@@ -6,6 +6,10 @@ export const SubMainBox = styled.div`
   gap: 71px;
   margin-top: 140px;
   margin-bottom: 140px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const SubList = styled.ul`
@@ -13,12 +17,16 @@ export const SubList = styled.ul`
   width: 700px;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
   img {
     width: 233px;
 
-    @media screen and (max-width: 767px) {
-      width: 120px;
-    }
+    /* @media screen and (max-width: 767px) {
+      width: calc(100% / 3);
+    } */
   }
 `;
 

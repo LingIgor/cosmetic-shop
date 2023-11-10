@@ -22,6 +22,10 @@ export const CareSectionContainer = styled.div`
 export const ContentContainer = styled.div`
   padding: 92px 204px 100px 100px;
 
+  @media screen and (max-width: 767px) {
+    padding: 30px 50px;
+  }
+
   h2 {
     margin-bottom: 20px;
   }
@@ -44,6 +48,7 @@ export const BoxSection = styled.div`
 
   @media screen and (max-width: 767px) {
     margin-left: 0;
+    width: 100%;
   }
 `;
 

@@ -38,6 +38,8 @@ export const RecomList = styled.ul`
   gap: 30px;
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;

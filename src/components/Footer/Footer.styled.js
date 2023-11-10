@@ -14,7 +14,6 @@ export const FooterConteiner = styled.div`
   @media (min-width: 768px) and (max-width: 1023px) {
     margin-top: 120px;
   }
-
 `;
 
 export const FooterBox = styled.div`
@@ -24,13 +23,11 @@ export const FooterBox = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #d1d1d1;
 
-
-
   @media (max-width: 767px) {
     padding: 20px 60px;
     align-items: center;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -42,6 +39,10 @@ export const Box = styled.div`
   display: flex;
   gap: 70px;
   align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterListLink = styled.div`

@@ -19,6 +19,7 @@ export const HistoryBox = styled.div`
 
   @media screen and (max-width: 767px) {
     margin-top: 40px;
+    max-width: 100%;
   }
 `;
 
@@ -35,7 +36,7 @@ export const TextBox = styled.div`
   @media screen and (max-width: 767px) {
     width: 70%;
     top: 5%;
-    left: 18%;
+    left: 13%;
     align-items: normal;
   }
 
