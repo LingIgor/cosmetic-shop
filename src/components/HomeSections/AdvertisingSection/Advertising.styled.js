@@ -36,12 +36,14 @@ export const Container = styled.div`
 `;
 
 export const InformBox = styled.div`
-  width: 300px;
+  max-width: 350px;
   position: absolute;
   top: 30%;
   left: 70%;
 
   @media screen and (max-width: 767px) {
-    left: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 `;

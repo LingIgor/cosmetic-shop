@@ -7,7 +7,7 @@ export const HistorySection = () => {
     <HistoryBox>
       <BackPhoto />
       <TextBox>
-        <h2 style={{marginBottom:"20px"}}>
+        <h2 style={{ marginBottom: '20px', fontSize: '35px' }}>
           “Мы стремимся сделать уход за кожей доступным и приятным ритуалом для
           всех, кто хочет заботиться о себе и своем теле”{' '}
         </h2>

@@ -42,7 +42,7 @@ export const ContentContainer = styled.div`
 
 export const BoxSection = styled.div`
   width: 700px;
-  height: 583px;
+  max-height: 583px;
   background-color: #f4f1ed;
   margin-left: -30px;
 
