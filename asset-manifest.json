@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cosmetic-shop/static/css/main.ea5ab5ab.css",
-    "main.js": "/cosmetic-shop/static/js/main.94346ee4.js",
+    "main.js": "/cosmetic-shop/static/js/main.d70b330e.js",
     "static/media/History.png": "/cosmetic-shop/static/media/History.43e1ba0afd9ea7c6e559.png",
     "static/media/CormorantInfant-Bold.ttf": "/cosmetic-shop/static/media/CormorantInfant-Bold.14a69efd2d6a7f1a1c6b.ttf",
     "static/media/Baner (1).jpg": "/cosmetic-shop/static/media/Baner (1).f368113578439a724b88.jpg",
@@ -32,10 +32,10 @@
     "static/media/nova-poshta.png": "/cosmetic-shop/static/media/nova-poshta.77bf1b5ea0b0e8806d81.png",
     "index.html": "/cosmetic-shop/index.html",
     "main.ea5ab5ab.css.map": "/cosmetic-shop/static/css/main.ea5ab5ab.css.map",
-    "main.94346ee4.js.map": "/cosmetic-shop/static/js/main.94346ee4.js.map"
+    "main.d70b330e.js.map": "/cosmetic-shop/static/js/main.d70b330e.js.map"
   },
   "entrypoints": [
     "static/css/main.ea5ab5ab.css",
-    "static/js/main.94346ee4.js"
+    "static/js/main.d70b330e.js"
   ]
 }
