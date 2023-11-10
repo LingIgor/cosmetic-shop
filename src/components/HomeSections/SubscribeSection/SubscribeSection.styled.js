@@ -19,17 +19,23 @@ export const SubList = styled.ul`
 
   @media screen and (max-width: 767px) {
     width: 100%;
+    gap: 15px;
+    justify-content: center;
   }
 
   img {
     width: 233px;
 
-    /* @media screen and (max-width: 767px) {
-      width: calc(100% / 3);
-    } */
+    @media screen and (max-width: 767px) {
+      width: 200px;
+    }
   }
 `;
 
 export const BoxText = styled.div`
-  width: 450px;
+  max-width: 450px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 55px;
+  }
 `;
