@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { BsTrash3 } from 'react-icons/bs';
 
@@ -29,7 +29,7 @@ export const ModalContent = styled.div`
 export const CloseIcon = styled(AiOutlineClose)`
   position: absolute;
   top: 8px;
-  right: 8px; 
+  right: 8px;
   cursor: pointer;
   color: grey;
 
@@ -61,6 +61,11 @@ export const CartItem = styled.li`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e1d5d5;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
   img {
     width: 15%;
