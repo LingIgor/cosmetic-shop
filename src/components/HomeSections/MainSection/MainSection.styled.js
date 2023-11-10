@@ -25,6 +25,10 @@ export const AppContainer = styled.div`
   left: 0;
   border-radius: 0;
   z-index: -1;
+
+  @media screen and (max-width: 767px) {
+    height: 680px;
+  }
 `;
 
 export const MainSectionImg = styled.img`
@@ -34,6 +38,16 @@ export const MainSectionImg = styled.img`
 export const MainSectionBox = styled.div`
   display: flex;
   gap: 20px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const MainMobSection = styled.div`
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
 `;
 
 export const Btn = styled.button`
@@ -47,12 +61,9 @@ export const Btn = styled.button`
   font-family: 'Cormorant Infant';
   box-shadow: 3px 3px 10px 3px rgb(167 143 145 / 68%);
 
-
   &:hover {
-    background-color: #ef69b5; 
-    transform: scale(1.05); 
+    background-color: #ef69b5;
+    transform: scale(1.05);
     box-shadow: 0 0 10px rgba(217, 83, 79, 0.8);
-
-
   }
 `;

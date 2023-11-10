@@ -7,9 +7,18 @@ export const NavBarContainer = styled.div`
   align-items: flex-end;
   flex-direction: column;
 
+  @media screen and (max-width: 767px) {
+    gap: 10px;
+    align-items: center;
+  }
+
   nav {
     display: flex;
     gap: 20px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -23,11 +32,10 @@ export const IconLink = styled(Link)`
   color: inherit;
 
   &:hover {
-   
-  color: #fd9bd5;
-  transform: translateY(-4px);
-}
-`
+    color: #fd9bd5;
+    transform: translateY(-4px);
+  }
+`;
 
 export const CartIconContainer = styled.div`
   position: relative;
@@ -45,35 +53,33 @@ export const CartCounter = styled.span`
   right: -3px;
 `;
 
-
 export const StyleLink = styled(NavLink)`
- text-decoration: none;
+  text-decoration: none;
   display: inline-block;
- 
-  padding: 10px 20px;    
-  border-radius: 20px;    
-  text-align: center; 
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
   font-weight: 600;
   color: #524f4e;
   background: white;
   box-shadow: 0 8px 15px rgb(243 46 237 / 10%);
-  transition: .3s;
+  transition: 0.3s;
 
+  @media screen and (min-width: 480px) and (max-width: 1200px) {
+    padding: 5px 10px;
+  }
 
-&:hover {
-  background: #fd9bd5;
-  box-shadow: 0 8px 15px rgb(243 46 237 / 10%);
-  color: white;
-  transform: translateY(-7px);
-}
+  &:hover {
+    background: #fd9bd5;
+    box-shadow: 0 8px 15px rgb(243 46 237 / 10%);
+    color: white;
+    transform: translateY(-7px);
+  }
 
-&.active {
-  background: #fd9bd5;;
-  box-shadow: 0 8px 15px rgb(243 46 237 / 30%);
-  color: white;
-  transform: translateY(-7px);
- 
-}
+  &.active {
+    background: #fd9bd5;
+    box-shadow: 0 8px 15px rgb(243 46 237 / 30%);
+    color: white;
+    transform: translateY(-7px);
+  }
 `;
-
-

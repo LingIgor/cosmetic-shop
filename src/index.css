@@ -1,42 +1,35 @@
 @import-normalize; /* bring in normalize.css styles */
 
-
-
-
-
-
-
-
 @font-face {
   font-family: 'Cormorant Infant';
-  src: url('../public/fonts/Cormorant_Infant/CormorantInfant-SemiBoldItalic.ttf') format('truetype');
+  src: url('../public/fonts/Cormorant_Infant/CormorantInfant-SemiBoldItalic.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cormorant Infant';
-  src: url('../public/fonts/Cormorant_Infant/CormorantInfant-Bold.ttf') format('truetype');
+  src: url('../public/fonts/Cormorant_Infant/CormorantInfant-Bold.ttf')
+    format('truetype');
   font-weight: Bold;
   font-style: normal;
 }
-
 
 body {
   margin: 0;
   font-family: 'Cormorant Infant', serif;
   font-weight: normal;
-  background-color: #fff; 
+  background-color: #fff;
   min-height: 100vh;
   letter-spacing: 0.02em;
   font-size: 20px;
   margin: 0 auto;
-  transition: 1.5s; 
+  transition: 1.5s;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 
 main {
   display: flex;
@@ -48,19 +41,17 @@ main {
   margin: 0 auto;
 }
 
-
 h1,
 h2,
 h3,
-h4
- {
+h4 {
   margin: 0px;
   font-weight: Bold;
 }
 
-a,p{
+a,
+p {
   margin: 0px;
-
 }
 
 ul,

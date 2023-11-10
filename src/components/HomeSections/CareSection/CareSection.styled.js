@@ -13,6 +13,10 @@ export const CareSectionContainer = styled.div`
   display: flex;
   margin-top: 140px;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -37,6 +41,10 @@ export const BoxSection = styled.div`
   height: 583px;
   background-color: #f4f1ed;
   margin-left: -30px;
+
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -44,4 +52,8 @@ export const ImageContainer = styled.div`
   height: 451px;
   position: relative;
   left: -150px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;

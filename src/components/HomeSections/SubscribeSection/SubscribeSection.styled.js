@@ -15,6 +15,10 @@ export const SubList = styled.ul`
 
   img {
     width: 233px;
+
+    @media screen and (max-width: 767px) {
+      width: 120px;
+    }
   }
 `;
 

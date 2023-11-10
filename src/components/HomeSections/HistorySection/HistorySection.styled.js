@@ -6,13 +6,20 @@ export const BackPhoto = styled.div`
   background-size: cover;
   width: 1400px;
   height: 433px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
 `;
 
 export const HistoryBox = styled.div`
-  width: 100%;
   height: 433px;
   margin-top: 140px;
   position: relative;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+  }
 `;
 
 export const TextBox = styled.div`
@@ -24,6 +31,13 @@ export const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    width: 70%;
+    top: 5%;
+    left: 18%;
+    align-items: normal;
+  }
 
   button {
     width: 163px;
